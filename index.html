@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shockers</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="arrow" id="scroll">
+     <a href="#"> <img src="./images/uparrow.png" alt=""></a>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="" class="log">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="color: black;">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./kids.html">Kids</a></li>
+              <li><a class="dropdown-item" href="./men.html">Men</a></li>
+              <li><a class="dropdown-item" href="./women.html">Women</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./about-us.html">Abouts</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+        </form>
+        <div>
+          <a href="" class="nav-item"><img src="./images/cart.png" alt=""></a>
+        </div>
+        <a href="" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="color: black;">
+            <img src="./images/user.png" alt="">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li><a class="dropdown-item" href="#">Signup</a></li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- this part for slide  -->
+  <div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/img_bg_1.jpg" class="d-block w-100" alt="...">
+          <div class="bottom">
+            <h1 style="text-align: center; color: aliceblue;">Men's</h1>
+            <h2 style="text-align: center; color: aliceblue;">Shoes</h2>
+            <p>Collection</p>
+            <p>New trending shoes</p>
+            <div class="btn12">
+              <button type="button" class="btn btn-secondary">Shop Collection</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/img_bg_2.jpg" class="d-block w-100" alt="...">
+          <div class="bottom">
+            <h1 style="text-align: center; color: aliceblue;">HUGE</h1>
+            <h2 style="text-align: center; color: aliceblue;">SALE</h2>
+            <p>50% OFF
+            </p>
+            <p>Big sale sandals
+
+
+            </p>
+            <div class="btn12">
+              <button type="button" class="btn btn-secondary">Shop Collection</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/img_bg_3.jpg" class="d-block w-100" alt="...">
+          <div class="bottom">
+            <h1 style="text-align: center; color: aliceblue;">NEW</h1>
+            <h2 style="text-align: center; color: aliceblue;">ARIVALS</h2>
+            <p>UP TO 30% OFF
+            </p>
+            <p>New stylish shoes for men
+            </p>
+            <div class="btn12">
+              <button type="button" class="btn btn-secondary">Shop Collection</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- intro part -->
+  <div class="img23">
+    <div class="text" id="animatedText">
+      Elevate your style with our exquisite collection of women's shoes, where comfort meets elegance for every step
+      of your journey.
+    </div>
+    <img src="./images/item-11.jpg" alt="">
+  </div>
+  <div class="img23">
+    <img src="./images/item-12.jpg" alt="">
+    <div class="text" id="animatedText1">
+      Stay comfortable and trendy with our collection of sneakers for every occasion.
+    </div>
+  </div>
+  <div class="img23">
+    <div class="text" id="animatedText2">
+      Find the perfect pair to complement your evening wear and make heads turn
+    </div>
+    <img src="./images/item-10.jpg" alt="">
+  </div>
+  <!-- best seller -->
+  <div class="container" style="padding-bottom: 2em;">
+    <center style="padding-bottom: 5em;">
+      <h1>BEST SELLERS</h1>
+    </center>
+    <div class="card-group">
+      <div class="card">
+        <img src="./images/item-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+    </div>
+    <!-- second group -->
+    <div class="card-group">
+      <div class="card">
+        <img src="./images/item-5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-7.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+    </div>
+    <!-- third card-group -->
+    <div class="card-group">
+      <div class="card">
+        <img src="./images/item-9.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-10.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-11.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/item-12.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <p class="card-text">MACA</p>
+          <p class="card-text">$139.00</p>
+        </div>
+      </div>
+      <!-- fourth card-group -->
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/item-13.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/item-14.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/item-15.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/item-16.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center><a href=""><button type="button" class="btn btn-secondary"
+          style="border-radius: 22px !important; height: 42px !important;">Shop All Products</button>
+      </a></center>
+  </div>
+  <!-- brands -->
+  <div class="collarib">
+    <div class="container">
+      <center>
+        <h1>Trusted Partner</h1>
+      </center>
+    </div>
+  </div>
+  <div class="collarib">
+    <div class="container">
+
+      <div class="col">
+        <center>
+          <img src="./images/brand-1.jpg" alt="">
+
+          <img src="./images/brand-2.jpg" alt="">
+          <img src="./images/brand-3.jpg" alt="">
+          <img src="./images/brand-4.jpg" alt="">
+          <img src="./images/brand-5.jpg" alt="">
+        </center>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="container">
+      <div class="grid">
+        <div class="par2">
+          <h4> About Footer</h4>
+          <div class="text1">
+            Stay comfortable and trendy with our collection of sneakers for every occasion.
+          </div>
+          <a href=""><img src="./images/twit.png" alt=""></a>
+          <a href=""><img src="./images/fb.png" alt=""></a>
+          <a href=""><img src="./images/link.png" alt=""></a>
+          <a href=""><img src="./images/dribble.png" alt=""></a>
+        </div>
+
+        <div class="par2" id="thj">
+          <h4>CUSTOMER CARE
+          </h4>
+          <ul>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">RETURNS/EXCHANGE</a></li>
+            <li><a href="#">GIFT VOUCHER</a></li>
+            <li><a href="#">WISHLIST</a></li>
+            <li><a href="#">SPECIAL</a></li>
+            <li><a href="#">CUSTOMER SERVICES</a></li>
+            <li><a href="#">SITE MAPS</a></li>
+          </ul>
+        </div>
+        <div class="par2" id="thj">
+          <h4>INFORMATION
+          </h4>
+          <ul>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">DELIVERY INFORMATION</a></li>
+            <li><a href="#">PRIVACY POLICY</a></li>
+            <li><a href="#">SUPPORT
+              </a></li>
+            <li><a href="#">SUPPORT</a></li>
+          </ul>
+        </div>
+        <div class="par2" id="thj">
+          <h4>NEWS
+          </h4>
+          <ul>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">EXHIBITIONS</a></li>
+          </ul>
+        </div>
+        <div class="par2" id="thj">
+          <h4 style="padding-bottom: 23px;">CONTACT INFORMATION
+          </h4>
+          <p>291 SOUTH 21TH STREET,
+            SUITE 721 NEW YORK NY 10016</p>
+          <a href="#">
+            <p>+ 1235 2355 98</p>
+          </a>
+          <a href="#">INFO@YOURSITE.COM</a>
+          <a href="#">YOURSITE.COM</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <center style=" color: rgb(168, 168, 168);
+      font-size: 10px;">Copyright ©2023 All rights reserved | This template is made with  by vishal  Demo Images: Unsplash , Pexels.com</center>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="./javascript/index.js"></script>
+</body>
+
+</html>

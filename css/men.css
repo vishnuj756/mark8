@@ -1,0 +1,357 @@
+@media only screen and (max-width:290px) {
+    .text1 {
+        font-size: 12px;
+    }
+
+    .grid3 {
+        margin-left: -23px;
+        padding-left: 1.4em;
+    }
+
+    .part1 img {
+        width: 200px;
+
+
+    }
+
+    .img34 {
+        width: 30px !important;
+    }
+
+    .video {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .form32 {
+        padding: 0.2em;
+    }
+}
+@media only screen and (max-width:576px) {
+#contain2{
+    left: -6em;
+   
+}
+}
+@media only screen and (min-width:576px) and (max-width:991px) {
+    .card p {
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+        font-size: 10px;
+    }
+
+    .card-title {
+        font-size: 10px !important;
+    }
+
+    .f img {
+        margin-bottom: 8px;
+    }
+
+    .btn45 {
+        padding: 3px;
+    }
+
+    /* .buypop{
+        width: 400px;
+    }
+     */
+
+}
+
+@media only screen and (min-width:768px) {
+    .card-title {
+        font-size: 17px !important;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    #count {
+        color: black;
+        font-size: 16px;
+        position: relative;
+        left: 40px !important;
+        top: -51px !important;
+        font-weight: 900;
+    }
+
+    .navbar-nav {
+        display: flex;
+        gap: 28px;
+        position: relative;
+        left: 0%;
+        transition: 1500ms;
+    }
+
+    .buypop {
+        left: 10em;
+    }
+
+}
+
+.poster {
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+}
+
+.poster h1 {
+    padding-left: 2em;
+    padding-bottom: 5em;
+    color: rgb(198, 198, 198);
+}
+
+.strap {
+    background: burlywood;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    column-gap: 1px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.strap a {
+    text-decoration: none;
+    color: white;
+    pointer-events: stroke;
+}
+
+.strap:hover a {
+    color: white;
+}
+
+/* this code for buy cards */
+.card h5 {
+    font-size: 18px;
+}
+
+.btn56 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn45 {
+    background-color: #FFC107;
+    border: none;
+    height: 2em;
+    border-radius: 1.5em;
+    padding: 5px;
+    transition: 500ms;
+}
+
+.btn45:active {
+    transform: scale(0.9);
+    background-color: rgb(70, 223, 70);
+}
+
+.f img {
+    cursor: pointer;
+}
+
+/* this css mini pop which define volume */
+#count {
+    color: #050505;
+    font-size: 15px;
+    position: relative;
+    left: -13px;
+    top: -9px;
+    font-weight: 900;
+}
+
+/* this css for whislist */
+.whislist {
+    position: fixed;
+    left: 3em;
+    z-index: 1;
+    display: none;
+}
+
+/* this code for support page */
+.container h3 {
+    margin-top: 2em;
+}
+
+.text1 {
+    padding-top: 3em;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    column-gap: 3em;
+    padding-top: 13em;
+    padding-bottom: 15px;
+}
+
+
+
+/* support */
+.box1 p {
+    box-sizing: border-box;
+    line-height: 1.9em;
+    font-size: 20px;
+}
+
+/* About us page */
+.video {
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.video a {
+    z-index: 1001;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -45px;
+    margin-left: -45px;
+    width: 90px;
+    height: 90px;
+    display: table;
+    text-align: center;
+    background: #88c8bc;
+    border-radius: 50%;
+}
+
+.text3 {
+    overflow: hidden;
+    font-size: 16px;
+    padding: 24px;
+    word-break: break-word;
+
+}
+
+.img24 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 23px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img24 img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 56px;
+    max-width: 100%;
+}
+
+.text7 {
+    overflow: hidden;
+    font-size: 15px;
+    /* font-weight: 400; */
+    padding: 30px;
+    word-break: break-word;
+
+    opacity: 0;
+    transition: opacity 6s;
+}
+
+/* enq form */
+.qform {
+    /* padding: 30px 30px 30px 130px; */
+    margin-top: 4px;
+}
+
+.qform h2 {
+    font-size: 36px;
+    /* margin-left: 14px; */
+    border-left: 13px solid #FFC107;
+
+}
+
+.form32 input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid beige;
+    margin-bottom: 7%;
+
+
+
+}
+
+.btn56 input {
+
+    width: auto !important;
+}
+
+.form32 textarea {
+    width: 100% !important;
+    height: 58px !important;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid beige;
+    background: transparent;
+
+}
+
+.Contact_page {
+    background-color: white;
+    box-shadow: 0px 0px 3em black;
+    border-radius: 5px;
+
+}
+
+.Contact_page h1 span {
+    font-size: 41px;
+    font-weight: bold;
+
+
+
+}
+
+.Contact_page {
+    padding: 27px;
+    /* margin-left: 89px; */
+}
+
+.Contact_page p {
+    text-align: justify;
+    font-size: 17px;
+}
+
+.list1 img {
+    width: 7%;
+}
+
+.list1 {
+    list-style: none;
+    margin-bottom: 23px;
+}
+
+.list2 {
+    list-style: none;
+    display: inline;
+    line-break: 2px;
+
+}
+
+.list2 a img {
+    border-radius: 41px;
+    background: white;
+    padding: 1%;
+}
+
+.list2 a img:hover {
+    background-color: yellow;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    column-gap: 3em;
+}

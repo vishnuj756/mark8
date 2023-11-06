@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shockers</title>
+    <link rel="stylesheet" href="./css/men.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="" class="log">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="width: 0 !important;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: black;">
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./kids.html">Kids</a></li>
+                <li><a class="dropdown-item" href="./men.html">Men</a></li>
+                <li><a class="dropdown-item" href="./women.html">Women</a></li>
+  
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./about-us.html">Abouts</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+          </form>
+          <div>
+            <a href="" class="nav-item"><img src="./images/cart.png" alt=""></a>
+          </div>
+          <a href="" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
+          <h4 id="count"></h4>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="color: black;">
+              <img src="./images/user.png" alt="">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Signup</a></li>
+  
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="poster" style="background: url(./images/cover2.jpg);">
+        <h1> WOMEN'S</h1>
+      </div>
+      <div class="strap">
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Seller</a>
+        <a href="#">Extended Width</a>
+        <a href="#">Sale</a>
+  
+      </div>
+    </div>
+    <!-- buy card -->
+    <div class="container" style="padding-top: 4em;">
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/women/item1.jpg" class="card-img-top" alt="..." style="height: 200px !important;" id="img22">
+          <div class="card-body">
+            <h5 class="card-title" id="title">Elegant Leather Heels for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text" id="price">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish1" onclick="wish(1)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item2.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Comfortable Athletic Sneakers</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish2" onclick="wish(2)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item3.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Stylish Ankle Boots for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish3"  onclick="wish(3)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item4.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Chic Ballet Flats for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish4" onclick="wish(4)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- second buy group
+   -->
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/women/item5.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Trendy Sandals with Floral Embellishments</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish5" onclick="wish(5)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item6.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Classic White Sneakers for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish6" onclick="wish(6)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item7.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Summer-ready Wedge Sandals for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish7"  onclick="wish(7)">&nbsp;&nbsp;
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item8.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Designer High Heel Pumps</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish8" onclick="wish(8)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/women/item9.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Casual Slip-On Loafers for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish9"  onclick="wish(9)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item10.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Fashionable Knee-High Boots for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish10" onclick="wish(10)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item11.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Versatile Slingback Sandals for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f" >
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish11" onclick="wish(11)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/women/item12.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Cozy Faux Fur Lined Winter Boots for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish12"  onclick="wish(12)">&nbsp;&nbsp;
+  
+              <button class="btn45">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- brands -->
+    <div class="collarib">
+      <div class="container">
+        <center>
+          <h1>Trusted Partner</h1>
+        </center>
+      </div>
+    </div>
+    <div class="collarib">
+      <div class="container">
+  
+        <div class="col">
+          <center>
+            <img src="./images/brand-1.jpg" alt="">
+  
+            <img src="./images/brand-2.jpg" alt="">
+            <img src="./images/brand-3.jpg" alt="">
+            <img src="./images/brand-4.jpg" alt="">
+            <img src="./images/brand-5.jpg" alt="">
+          </center>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="container">
+        <div class="grid">
+          <div class="par2">
+            <h4> About Footer</h4>
+            <div class="text1">
+              Stay comfortable and trendy with our collection of sneakers for every occasion.
+            </div>
+            <a href=""><img src="./images/twit.png" alt=""></a>
+            <a href=""><img src="./images/fb.png" alt=""></a>
+            <a href=""><img src="./images/link.png" alt=""></a>
+            <a href=""><img src="./images/dribble.png" alt=""></a>
+          </div>
+  
+          <div class="par2" id="thj">
+            <h4>CUSTOMER CARE
+            </h4>
+            <ul>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">RETURNS/EXCHANGE</a></li>
+              <li><a href="#">GIFT VOUCHER</a></li>
+              <li><a href="#">WISHLIST</a></li>
+              <li><a href="#">SPECIAL</a></li>
+              <li><a href="#">CUSTOMER SERVICES</a></li>
+              <li><a href="#">SITE MAPS</a></li>
+            </ul>
+          </div>
+          <div class="par2" id="thj">
+            <h4>INFORMATION
+            </h4>
+            <ul>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">DELIVERY INFORMATION</a></li>
+              <li><a href="#">PRIVACY POLICY</a></li>
+              <li><a href="#">SUPPORT
+                </a></li>
+              <li><a href="#">SUPPORT</a></li>
+            </ul>
+          </div>
+          <div class="par2" id="thj">
+            <h4>NEWS
+            </h4>
+            <ul>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">PRESS</a></li>
+              <li><a href="#">EXHIBITIONS</a></li>
+            </ul>
+          </div>
+          <div class="par2" id="thj">
+            <h4 style="padding-bottom: 23px;">CONTACT INFORMATION
+            </h4>
+            <p>291 SOUTH 21TH STREET,
+              SUITE 721 NEW YORK NY 10016</p>
+            <a href="#">
+              <p>+ 1235 2355 98</p>
+            </a>
+            <a href="#">INFO@YOURSITE.COM</a>
+            <a href="#">YOURSITE.COM</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <center style=" color: rgb(168, 168, 168);
+    font-size: 10px;">Copyright ©2023 All rights reserved | This template is made with by vishal Demo Images: Unsplash ,
+          Pexels.com</center>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+      <script src="./javascript/index.js"></script>
+      
+  </body>
+
+</html>
