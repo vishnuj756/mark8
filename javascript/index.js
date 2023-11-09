@@ -1,7 +1,7 @@
 const textElements = document.querySelectorAll('.text,.text7');
 
 const logo = document.getElementById('logo');
-let title = document.getElementById('title'); 
+let title = document.getElementById('title1'); 
 let price = document.getElementById('price');
 let product = [
   {
@@ -23,22 +23,178 @@ let product = [
     "src": "./images/kids/item-4.jpg",
     "title": "School-Ready Kids' Uniform Shoes", 
     "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-5.jpg",
+    "title": "All-Star Sports Athletic Shoes for Kids", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-6.jpg",
+    "title": "Light-Up Superhero Sneakers for Little Heroes", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-7.jpg",
+    "title": "Luxury Designer High Heel Pumps", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-8.jpg",
+    "title": "Luxury Designer High Heel Pumps", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-9.jpg",
+    "title": "Tiny Toes Ballet Flats – Perfect for Parties", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-10.jpg",
+    "title": "Boys' Adventure-Ready Hiking Boot", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-11.jpg",
+    "title": "Dazzling Princess Sparkle Shoes for Girl", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/kids/item-12.jpg",
+    "title": "Kids' Comfy Cloud Sneakers", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item1.jpg",
+    "title": "leek Men's Black Oxford Dress Shoes", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/mens/item2.jpg",
+    "title": "High-Top Urban Sneakers for Men", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/mens/item3.jpg",
+    "title": "Men's All-Terrain Trail Running Shoes", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item4.jpg",
+    "title": "Formal Wingtip Brogue Shoes for Men", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item5.jpg",
+    "title": "Genuine Leather Driving Moccasins", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/mens/item6.jpg",
+    "title": "High-Top Urban Sneakers for Men", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item7.jpg",
+    "title": "Casual Canvas Slip-On Shoes for Men", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item8.jpg",
+    "title": "Stylish Men's Suede Chelsea Boots", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item9.jpg",
+    "title": "Men's Waterproof Hiking Boots", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item10.jpg",
+    "title": "Handcrafted Italian Leather Loafers", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item11.jpg",
+    "title": "Athletic Performance Sneakers for Men", 
+    "price": "$139",
+  } ,
+  {
+    "src": "./images/mens/item12.jpg",
+    "title": "Classic Leather Men's Dress Shoes", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item1.jpg",
+    "title": "Elegant Leather Heels for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item2.jpg",
+    "title": "Comfortable Athletic Sneakers", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item3.jpg",
+    "title": "Stylish Ankle Boots for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item4.jpg",
+    "title": "Chic Ballet Flats for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item5.jpg",
+    "title": "Trendy Sandals with Floral Embellishments", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item6.jpg",
+    "title": "Classic White Sneakers for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item7.jpg",
+    "title": "Summer-ready Wedge Sandals for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item8.jpg",
+    "title": "Luxury Designer High Heel Pumps", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item9.jpg",
+    "title": "Casual Slip-On Loafers for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item10.jpg",
+    "title": "Fashionable Knee-High Boots for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item11.jpg",
+    "title": "Versatile Slingback Sandals for Women", 
+    "price": "$139",
+  },
+  {
+    "src": "./images/women/item12.jpg",
+    "title": "Cozy Faux Fur Lined Winter Boots for Women", 
+    "price": "$139",
   }
 ];
-
+console.log(product)
 function checkout(a) {
   if(a <= product.length)
   {
   logo.src = product[a].src;
   title.textContent = product[a].title; // Corrected the variable name from 'tittle' to 'title'
   price.textContent = product[a].price;
-
+popopen();
 }
-// function pop(){
-//  let pop=document.getElementsByClassName('buypop').style
-//  if(pop.style.display=="none")
-//  pop.innerHtml=style.display="blo"
-// }
+
  
   
 }
@@ -89,14 +245,14 @@ function wish(a) {
 }
 
 
-let i = 0;
+// let i = 0;
 
-// Update the content with the retrieved value
-if (i !== null) {
-  let x = document.getElementById('count');
-  x.innerText = i;
-  console.log(x)
-}
+// // Update the content with the retrieved value
+// if (i !== null) {
+//   let x = document.getElementById('count');
+//   x.innerText = i;
+//   console.log(x)
+// }
 
 
 function count() {
@@ -104,19 +260,56 @@ function count() {
   i = parseInt(x.innerText) + 1;
   x.innerText = i;
   console.log(x)
-
-  // Store the updated value in localStorage
-
 }
+
+//   // Store the updated value in localStorage
 function countminus() {
   let x = document.getElementById('count');
   i--;
   x.innerText = i;
 }
-function newcard() {
 
 
-}
+const popup = document.getElementById('popup');
+ function popclosed(){
+  popup.style.visibility = 'hidden';
+  popup.style.opacity = '0';
+  console.log("good")
+ }
+ function popopen(){
+  popup.style.visibility = 'visible';
+  popup.style.opacity = '1';
+  popup.style.transform='scale(1)'
+  console.log("good")
+ }
+//  this code for quantity 
+const plus = document.getElementById('qty_inc');
+const qty = document.getElementById('qty');
+
+plus.addEventListener("click", () => {
+    let quantity = parseInt(qty.textContent);
+    quantity++;
+
+    if (quantity > 3) {
+      quantity=3;
+        alert("minimum 3 unit allowed");
+        
+    }
+
+    qty.textContent = quantity;
+});
+
+const decre=document.getElementById('qty_dnc');
+decre.addEventListener("click",()=>{
+  let quantity=parseInt(qty.textContent);
+  quantity--;
+  if(quantity<1){
+    quantity=1;
+    
+  }
+  qty.textContent=quantity;
+})
+
 
 
 

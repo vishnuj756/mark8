@@ -27,12 +27,15 @@
         padding: 0.2em;
     }
 }
+
 @media only screen and (max-width:576px) {
-#contain2{
-    left: -6em;
-   
+
+
+    #box {
+        padding-left: 0px !important;
+    }
 }
-}
+
 @media only screen and (min-width:576px) and (max-width:991px) {
     .card p {
         margin-top: 0 !important;
@@ -52,16 +55,16 @@
         padding: 3px;
     }
 
-    /* .buypop{
-        width: 400px;
-    }
-     */
-
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (max-width:768px) {
     .card-title {
         font-size: 17px !important;
+    }
+
+    
+    #card-body1 {
+        padding: 3px !important;
     }
 }
 
@@ -73,6 +76,7 @@
         left: 40px !important;
         top: -51px !important;
         font-weight: 900;
+
     }
 
     .navbar-nav {
@@ -83,8 +87,20 @@
         transition: 1500ms;
     }
 
-    .buypop {
-        left: 10em;
+
+
+    #card-body1 {
+        padding: 5rem 3rem;
+    }
+
+    #price {
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    #title1 {
+        font-size: 15px !important;
     }
 
 }
@@ -159,6 +175,7 @@
     left: -13px;
     top: -9px;
     font-weight: 900;
+    width: 2em;
 }
 
 /* this css for whislist */
@@ -355,3 +372,48 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     column-gap: 3em;
 }
+/* offer line */
+.offer-line {
+    color: #e74c3c; /* Red color for emphasis */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .offer-line:nth-child(2) {
+    color: #3498db; /* Blue color for variety */
+  }
+  
+  .offer-line:nth-child(3) {
+    color: #2ecc71; /* Green color for variety */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .offer-line {
+    color: #e74c3c; /* Red color for emphasis */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    animation: blink 2s infinite; /* Adjust the duration as needed */
+  }
+  
+  .offer-line:nth-child(2) {
+    color: #3498db; /* Blue color for variety */
+    animation: blink 2s infinite 0.5s; /* Delay the animation for variety */
+  }
+  
+  .offer-line:nth-child(3) {
+    color: #2ecc71; /* Green color for variety */
+    animation: blink 1s infinite 500ms; /* Delay the animation for variety */
+  }
+
+  
+  

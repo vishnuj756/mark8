@@ -9,38 +9,50 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 
 <body>
-  <div class="container" style="position: absolute;
 
- top: 20%;
- z-index: 1;
- padding: 7px;
- width: 100%;
- padding-left: 13em;">
-    <div class="buypop">
-      <div class="card mb-3" style="max-width: 540px;max-width: 552px;
-  margin: 12px 8px;
-  padding: 21px;
-  border-radius: 2em;" id="contain2">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." id="logo">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title" id="title">Card title</h5>
-              <p class="card-text" id="price">This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <div class="center-container">
+    <div class="popup" id="popup">
+  
+      <div class="popup-content">
+        <div class="card "
+          style="max-width: 500px; overflow: visible !important; height: auto !important; border: none !important;">
+          <div class="row g-0">
+            <h5 style="text-align: right;"><p style="cursor: pointer; padding-right: 17px;
+              padding-top: 12px;" onclick="popclosed()">X</p></h5>
+            <div class="col-md-4"
+              style="display: flex; justify-content: center; align-items: center; width: auto; overflow: visible">
+              <img src="..." class="img-fluid rounded-start" alt="..." id="logo" style="width: 250px;
+                height: 244px;
+                padding: 9px;
+               border: none;
+               background: none;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body" id="card-body1" style="text-align: left;">
+                <h5 class="card-title" id="title1">Card title</h5>
+                <p class="card-text" id="price">This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.</p>
+                <p class="offer-line">Special Offer: Get 10% off today!</p>
+                <p class="offer-line">Limited Time Offer: Buy now and save!</p>
+                <p class="offer-line">Free Shipping on all orders!</p>
+                <div class="qty">
+                  <img src="./images/minus.svg" alt="" id="qty_dnc">
+                  <h4 id="qty">1</h4>
+                  <img src="./images/plus.svg" alt="" id="qty_inc">
+                </div>
+                <a href="#" target="_blank"><button type="button" class="btn btn-primary" onclick="popclosed()">Checkout</button></a>
+
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="" class="log">
@@ -61,7 +73,7 @@
               Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Kids</a></li>
+              <li><a class="dropdown-item" href="./kids.html">Kids</a></li>
               <li><a class="dropdown-item" href="./men.html">Men</a></li>
               <li><a class="dropdown-item" href="./women.html">Women</a></li>
 
@@ -74,12 +86,15 @@
             <a class="nav-link active" aria-current="page" href="./about-us.html">Abouts</a>
           </li>
         </ul>
-
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+        </form>
         <div>
           <a href="" class="nav-item"><img src="./images/cart.png" alt=""></a>
         </div>
         <a href="" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
-        <h4 id="count"></h4>
+        <h4 id="count">0</h4>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false" style="color: black;">
@@ -205,7 +220,7 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish6" onclick="wish(6)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(5)" >Buy Now</button>
           </div>
         </div>
       </div>
@@ -217,7 +232,7 @@
           <p class="card-text">$139.00</p>
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish7" onclick="wish(7)">&nbsp;&nbsp;
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(6)" >Buy Now</button>
           </div>
         </div>
       </div>
@@ -230,7 +245,7 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish8" onclick="wish(8)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(7)" >Buy Now</button>
           </div>
         </div>
       </div>
@@ -245,7 +260,7 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish9" onclick="wish(9)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(8)" >Buy Now</button>
           </div>
         </div>
       </div>
@@ -258,7 +273,7 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish10" onclick="wish(10)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(9)" >Buy Now</button>
           </div>
         </div>
       </div>
@@ -271,12 +286,12 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish11" onclick="wish(11)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(10)" >Buy Now</button>
           </div>
         </div>
       </div>
       <div class="card">
-        <img src="./images/item-12.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+        <img src="./images/kids/item-12.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
         <div class="card-body">
           <h5 class="card-title">Kids' Comfy Cloud Sneakers</h5>
           <p class="card-text">MACA</p>
@@ -284,7 +299,7 @@
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish12" onclick="wish(12)">&nbsp;&nbsp;
 
-            <button class="btn45">Buy Now</button>
+            <button class="btn45" onclick="checkout(11)" >Buy Now</button>
           </div>
         </div>
       </div>

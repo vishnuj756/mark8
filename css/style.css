@@ -242,7 +242,7 @@
 
 }
 /* buy pop */
-.buypop{
+/* .buypop{
     background-image: linear-gradient(
         180deg,
         hsl(275deg 98% 84%) 0%,
@@ -262,9 +262,11 @@
     border-radius: 29px;
     max-width: 100%;
     width: 550px;
-    padding: 1px 1px 0.8px 1.2px;;
+    padding: 1px 1px 0.8px 1.2px;
+    position: relative;
+    left: 10em;
 
-}
+} */
 #logo1{
     height: 266px;
     margin: 3em;
@@ -275,3 +277,64 @@
     cursor:pointer;
     transform: scale(1.2);
 }
+
+
+.popup {
+    
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 24em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 5em;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s,scale 7s ease ;
+    transform: scale(0);
+
+}
+.card-body{
+    text-align: left;
+}
+.popup-content {
+    background-image: linear-gradient(
+        180deg,
+        hsl(275deg 98% 84%) 0%,
+        hsl(290deg 92% 86%) 19%,
+        hsl(306deg 86% 87%) 27%,
+        hsl(321deg 78% 88%) 34%,
+        hsl(337deg 69% 90%) 41%,
+        hsl(352deg 56% 91%) 47%,
+        hsl(0deg 56% 91%) 53%,
+        hsl(0deg 68% 90%) 59%,
+        hsl(0deg 79% 89%) 66%,
+        hsl(0deg 87% 88%) 73%,
+        hsl(0deg 94% 87%) 81%,
+        hsl(0deg 100% 86%) 100%
+      );
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.qty{
+    display: inline-flex;
+    gap: 9px;
+    width: 100%;
+}
+.qty img{
+    width: 20px;
+}
+.qty h4{
+    border-bottom: 2px solid ;
+    font-size: 19px;
+    font-weight: 400px;
+}
+
