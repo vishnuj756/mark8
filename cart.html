@@ -76,39 +76,85 @@
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Wishtlist</li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
             </ol>
         </nav>
     </div>
 
-    <!-- list of product wishtlist-->
-    <div class="cart-wrap">
+    <!-- list of product cart-->
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-heading mb-10">My wishlist</div>
-                    <div class="table-wishlist">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                            <thead>
-                                <tr>
-                                    <th width="45%">Product Name</th>
-                                    <th width="15%">Unit Price</th>
-                                    <th width="15%">Stock Status</th>
-                                    <th width="15%"></th>
-                                    <th width="10%">Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody id="wishlist">
-
-
-                            </tbody>
-                        </table>
+                    <div class="process-wrap">
+                        <div class="process text-center">
+                            <p><span style="color:#aefae0;">01</span></p>
+                            <h3>Shopping Cart</h3>
+                        </div>
+                
+                        <div class="process text-center">
+                            <p><span>02</span></p>
+                            <h3>Checkout</h3>
+                        </div>
+                
+                        <div class="process text-center">
+                            <p><span>03</span></p>
+                            <h3>Order Complete</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-wishlist">
+                                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="45%">PRODUCT DETAILS</th>
+                                            <th width="15%">PRICE</th>
+                                            <th width="15%">QUANTITY</th>
+                                            <th width="15%">TOTAL</th>
+                                            <th width="10%">REMOVE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="wishlist">
+        
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
-        </div>
-    </div>
-
+            <div class="container">
+               <div class="cart-am">
+                <div class="coupon">
+                    <form action="#">
+                        <div class="row form-group">
+                            <div class="col-sm-10">
+                                <input type="text" name="quantity" class="form-control input-number" placeholder="Your Coupon Number...">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="submit" value="Apply Coupon" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="total2">
+                    <div class="sub">
+                        <p><span>Subtotal:</span>$<span id="subtotal">00</span></p>
+                        <p><span>Delivery:</span>$<span>0.00</span></p>
+                        <p><span>Discount:</span>$<span id="Discount">00.00</span></p>
+                    </div>
+                    <div class="grand-total">
+                        <p><span><strong>Total:</strong></span><span id="main_total">$00.00</span></span></p>
+                    </div>
+                </div>
+               </div>
+            </div>
+            <div class="container">
+                <a href="./checkout.html"> <div class="next-p">
+                    <input type="submit" value="NEXT" class="btn btn-primary">
+                </div></a>
+            </div>
+            
     <!-- footer -->
     <div class="container">
         <div class="grid">
@@ -181,51 +227,70 @@
         crossorigin="anonymous"></script>
     <script src="./javascript/index.js"></script>
     <script>
-      function displayWishlist() {
-      var wishlistElement = document.getElementById("wishlist");
-      wishlistElement.innerHTML = ""; // Clear previous items
-
-      var storedWishlist = localStorage.getItem('wishlist');
-      var wishlistData = storedWishlist ? JSON.parse(storedWishlist) : [];
-
-      wishlistData.forEach(item => {
-        var listItem = document.createElement("tr");
-        listItem.className = "wishlist-item";
-        listItem.innerHTML = `
-        <td width="45%">
-        <div class="display-flex align-center">
-          <div class="img-product">
-            <img src=${item.src} alt="${item.name}">
+        function displayWishlist() {
+        var wishlistElement = document.getElementById("wishlist");
+        wishlistElement.innerHTML = ""; // Clear previous items
+  
+        var storedWishlist = localStorage.getItem('wishlist');
+        var wishlistData = storedWishlist ? JSON.parse(storedWishlist) : [];
+  
+        wishlistData.forEach(item => {
+          var listItem = document.createElement("tr");
+          listItem.className = "wishlist-item";
+          listItem.innerHTML = `
+          <td width="45%">
+          <div class="display-flex align-center">
+            <div class="img-product">
+              <img src=${item.src} alt="${item.name}">
+            </div>
+            <div class="name-product">
+              ${item.name}
+            </div>
           </div>
-          <div class="name-product">
-            ${item.name}
-          </div>
-        </div>
-      </td>
-      <td width="15%" class="price">${item.price}</td>
-      <td width="15%"><span class="in-stock-box">In Stock</span></td>
-      <td width="15%"> <button class="btn45" onclick="checkout(1)">Buy Now</button></td>
-      <td width="15%"><button class="round-black-btn small-btn" onclick="removeFromWishlist(${item.id})">Remove</button></td>
-      <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
-        `;
-        wishlistElement.appendChild(listItem);
-      });
-    }
+        </td>
+        <td width="15%" class="price">${item.price}</td>
+        <td width="15%"><span >${item.qty}</span></td>
+        <td width="15%" id="total">${item.total}</td>
+        <td width="15%"><button class="round-black-btn small-btn" onclick="removeFromWishlist(${item.id})">Remove</button></td>
+        <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+          `;
+          wishlistElement.appendChild(listItem);
+          console.log(item.qty)
+        function mainbill(){
+            const subtotal=document.getElementById("subtotal");
+            const Discount=document.getElementById("Discount").innerHTML="45";
+            const main_total=document.getElementById("main_total");
+            subtotal.innerText=item.total;
+           let t=parseInt(item.total)
+           let d=parseInt(Discount);
+           let tt=t-d;
+           main_total.innerText="$"+tt;
 
-    // Function to remove an item from the wishlist
-    function removeFromWishlist(itemId) {
-      var storedWishlist = localStorage.getItem('wishlist');
-      var wishlistData = storedWishlist ? JSON.parse(storedWishlist) : [];
+        }
+        mainbill();
+        });
+      }
 
-      wishlistData = wishlistData.filter(item => item.id !== itemId);
-      localStorage.setItem('wishlist', JSON.stringify(wishlistData));
-
+  
+      // Function to remove an item from the wishlist
+      function removeFromWishlist(itemId) {
+        var storedWishlist = localStorage.getItem('wishlist');
+        var wishlistData = storedWishlist ? JSON.parse(storedWishlist) : [];
+  
+        wishlistData = wishlistData.filter(item => item.id !== itemId);
+        localStorage.setItem('wishlist', JSON.stringify(wishlistData));
+  
+        displayWishlist();
+        function clear(){
+            const subtotal=document.getElementById("subtotal").innerHTML="";
+            const Discount=document.getElementById("Discount").innerHTML="";
+            const main_total=document.getElementById("main_total").innerHTML="$00.00";
+        }
+        clear()
+      }
+  
+      // Initial display
       displayWishlist();
-    }
-
-    // Initial display
-    displayWishlist();
-    </script>
-</body>
-
-</html>
+      
+      </script>
+</body></html>

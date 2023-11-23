@@ -34,8 +34,7 @@
             <div class="col-md-6">
               <div class="card-body" id="card-body1" style="text-align: left;">
                 <h5 class="card-title" id="title1">Card title</h5>
-                <p class="card-text" id="price">This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
+                <p class="card-text" >$<span id="price"></span></p>
                 <p class="offer-line">Special Offer: Get 10% off today!</p>
                 <p class="offer-line">Limited Time Offer: Buy now and save!</p>
                 <p class="offer-line">Free Shipping on all orders!</p>
@@ -44,7 +43,7 @@
                   <h4 id="qty">1</h4>
                   <img src="./images/plus.svg" alt="" id="qty_inc">
                 </div>
-                <a href="#" target="_blank"><button type="button" class="btn btn-primary" onclick="popclosed()">Checkout</button></a>
+                <a href="cart.html" ><button type="button" class="btn btn-primary" onclick="popclosed()">Checkout</button></a>
 
               </div>
             </div>
@@ -93,7 +92,7 @@
         <div>
           <a href="" class="nav-item"><img src="./images/cart.png" alt=""></a>
         </div>
-        <a href="" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
+        <a href="./wishlist.html" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
         <h4 id="count">0</h4>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -169,11 +168,11 @@
         </div>
       </div>
       <div class="card">
-        <img src="./images/kids/item-3.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+        <img src="./images/kids/item-3.jpg" class="card-img-top" alt="..." style="height: 200px !important;" id="src3">
         <div class="card-body">
-          <h5 class="card-title">Trendy Tots High-Top Fashion Shoes</h5>
+          <h5 class="card-title" id="name3">Trendy Tots High-Top Fashion Shoes</h5>
           <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+          <p class="card-text"id="price3">$139.00</p>
           <div class="f">
             <img src="./images/wish-cart.png" alt="" width="30px" id="wish3" onclick="wish(3)">&nbsp;&nbsp;
 
@@ -398,6 +397,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
     <script src="./javascript/index.js"></script>
+    <script>
+      
+    </script>
 </body>
 
 </html>

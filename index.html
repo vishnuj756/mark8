@@ -12,6 +12,48 @@
 </head>
 
 <body>
+  <div class="center-container">
+    <div class="popup" id="popup">
+
+      <div class="popup-content">
+        <div class="card "
+          style="max-width: 500px; overflow: visible !important; height: auto !important; border: none !important;">
+          <div class="row g-0">
+            <h5 style="text-align: right;">
+              <p style="cursor: pointer; padding-right: 17px;
+                padding-top: 12px;" onclick="popclosed()">X</p>
+            </h5>
+            <div class="col-md-4"
+              style="display: flex; justify-content: center; align-items: center; width: auto; overflow: visible">
+              <img src="..." class="img-fluid rounded-start" alt="..." id="logo" style="width: 250px;
+                  height: 244px;
+                  padding: 9px;
+                 border: none;
+                 background: none;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body" id="card-body1" style="text-align: left;">
+                <h5 class="card-title" id="title1">Card title</h5>
+                <p class="card-text" id="price">This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.</p>
+                <p class="offer-line">Special Offer: Get 10% off today!</p>
+                <p class="offer-line">Limited Time Offer: Buy now and save!</p>
+                <p class="offer-line">Free Shipping on all orders!</p>
+                <div class="qty">
+                  <img src="./images/minus.svg" alt="" id="qty_dnc">
+                  <h4 id="qty">1</h4>
+                  <img src="./images/plus.svg" alt="" id="qty_inc">
+                </div>
+                <a href="#" target="_blank"><button type="button" class="btn btn-primary"
+                    onclick="popclosed()">Checkout</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="arrow" id="scroll">
       <a href="#"> <img src="./images/uparrow.png" alt=""></a>
@@ -57,7 +99,7 @@
         <div>
           <a href="" class="nav-item"><img src="./images/cart.png" alt=""></a>
         </div>
-        <a href="" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
+        <a href="./wishlist.html" class="nav-item"><img src="./images/wish-cart.png" alt=""></a>
         <h4 id="count">0</h4>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -151,140 +193,225 @@
       <h1>BEST SELLERS</h1>
     </center>
     <div class="card-group">
-      <div class="card">
-        <img src="./images/item-1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/women/item1.jpg" class="card-img-top" alt="..." style="height: 200px !important;" id="img22">
+          <div class="card-body">
+            <h5 class="card-title" id="title">Elegant Leather Heels for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text" id="price">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish1" onclick="wish(1)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(24)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/women/item2.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Comfortable Athletic Sneakers</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish2" onclick="wish(2)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(25)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/women/item3.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Stylish Ankle Boots for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish3" onclick="wish(3)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(26)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/women/item4.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Chic Ballet Flats for Women</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish4" onclick="wish(4)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(27)">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- second group -->
     <div class="card-group">
-      <div class="card">
-        <img src="./images/item-5.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/mens/item1.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">leek Men's Black Oxford Dress Shoes</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish1"  onclick="wish(1)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(12)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/mens/item2.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">High-Top Urban Sneakers for Men</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish2"  onclick="wish(2)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(13)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/mens/item3.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Men's All-Terrain Trail Running Shoes</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish3" onclick="wish(3)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(14)">Buy Now</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/item-8.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
-          <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+        <div class="card">
+          <img src="./images/mens/item4.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
+          <div class="card-body">
+            <h5 class="card-title">Formal Wingtip Brogue Shoes for Men</h5>
+            <p class="card-text">MACA</p>
+            <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish4"  onclick="wish(4)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(15)">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- third card-group -->
     <div class="card-group">
       <div class="card">
-        <img src="./images/item-9.jpg" class="card-img-top" alt="...">
+        <img src="./images/kids/item-1.jpg" class="card-img-top" alt="..." style="height: 200px !important;" id="img22">
         <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <h5 class="card-title" id="title">Rainbow Unicorn Magic Slip-Ons for Kids</h5>
           <p class="card-text">MACA</p>
-          <p class="card-text">$139.00</p>
+          <p class="card-text" id="price">$139.00</p>
+          <div class="f">
+            <img src="./images/wish-cart.png" alt="" width="30px" id="wish1" onclick="wish(1)">&nbsp;&nbsp;
+
+            <button class="btn45" onclick="checkout('0')">Buy Now</button>
+          </div>
         </div>
       </div>
       <div class="card">
-        <img src="./images/item-10.jpg" class="card-img-top" alt="...">
+        <img src="./images/kids/item-2.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
         <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <h5 class="card-title">School-Ready Kids' Uniform Shoes</h5>
           <p class="card-text">MACA</p>
           <p class="card-text">$139.00</p>
+          <div class="f">
+            <img src="./images/wish-cart.png" alt="" width="30px" id="wish2" onclick="wish(2)">&nbsp;&nbsp;
+
+            <button class="btn45" onclick="checkout(1)">Buy Now</button>
+          </div>
         </div>
       </div>
       <div class="card">
-        <img src="./images/item-11.jpg" class="card-img-top" alt="...">
+        <img src="./images/kids/item-3.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
         <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <h5 class="card-title">Trendy Tots High-Top Fashion Shoes</h5>
           <p class="card-text">MACA</p>
           <p class="card-text">$139.00</p>
+          <div class="f">
+            <img src="./images/wish-cart.png" alt="" width="30px" id="wish3" onclick="wish(3)">&nbsp;&nbsp;
+
+            <button class="btn45" onclick="checkout(2)">Buy Now</button>
+          </div>
         </div>
       </div>
       <div class="card">
-        <img src="./images/item-12.jpg" class="card-img-top" alt="...">
+        <img src="./images/kids/item-4.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
         <div class="card-body">
-          <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+          <h5 class="card-title">Cozy Critter Slippers – Cute and Warm</h5>
           <p class="card-text">MACA</p>
           <p class="card-text">$139.00</p>
+          <div class="f">
+            <img src="./images/wish-cart.png" alt="" width="30px" id="wish4" onclick="wish(4)">&nbsp;&nbsp;
+
+            <button class="btn45" onclick="checkout(3)">Buy Now</button>
+          </div>
         </div>
+      </div>
       </div>
       <!-- fourth card-group -->
       <div class="card-group">
         <div class="card">
-          <img src="./images/item-13.jpg" class="card-img-top" alt="...">
+          <img src="./images/women/item9.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
           <div class="card-body">
-            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <h5 class="card-title">Casual Slip-On Loafers for Women</h5>
             <p class="card-text">MACA</p>
             <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish9" onclick="wish(9)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(32)">Buy Now</button>
+            </div>
           </div>
         </div>
         <div class="card">
-          <img src="./images/item-14.jpg" class="card-img-top" alt="...">
+          <img src="./images/women/item10.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
           <div class="card-body">
-            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <h5 class="card-title">Fashionable Knee-High Boots for Women</h5>
             <p class="card-text">MACA</p>
             <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish10" onclick="wish(10)">&nbsp;&nbsp;
+  
+              <button class="btn45" onclick="checkout(33)">Buy Now</button>
+            </div>
           </div>
         </div>
         <div class="card">
-          <img src="./images/item-15.jpg" class="card-img-top" alt="...">
+          <img src="./images/women/item11.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
           <div class="card-body">
-            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <h5 class="card-title">Versatile Slingback Sandals for Women</h5>
             <p class="card-text">MACA</p>
             <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish11" onclick="wish(11)">&nbsp;&nbsp;
+  
+              <button class="btn45"onclick="checkout(34)">Buy Now</button>
+            </div>
           </div>
         </div>
         <div class="card">
-          <img src="./images/item-16.jpg" class="card-img-top" alt="...">
+          <img src="./images/women/item12.jpg" class="card-img-top" alt="..." style="height: 200px !important;">
           <div class="card-body">
-            <h5 class="card-title">WOMEN'S BOOTS SHOES</h5>
+            <h5 class="card-title">Cozy Faux Fur Lined Winter Boots for Women</h5>
             <p class="card-text">MACA</p>
             <p class="card-text">$139.00</p>
+            <div class="f">
+              <img src="./images/wish-cart.png" alt="" width="30px" id="wish12" onclick="wish(12)">&nbsp;&nbsp;
+  
+              <button class="btn45"onclick="checkout(35)">Buy Now</button>
+            </div>
           </div>
         </div>
       </div>

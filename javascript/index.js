@@ -1,3 +1,4 @@
+
 const textElements = document.querySelectorAll('.text,.text7');
 
 const logo = document.getElementById('logo');
@@ -7,12 +8,12 @@ let product = [
   {
     "src": "./images/kids/item-1.jpg",
     "title": "Rainbow Unicorn Magic Slip-Ons for Kids", 
-    "price": "$139"
+    "price": 139
   },
   {
     "src": "./images/kids/item-2.jpg",
     "title": "School-Ready Kids' Uniform Shoes", 
-    "price": "$139",
+    "price": 139,
   },
   {
     "src": "./images/kids/item-3.jpg",
@@ -190,9 +191,10 @@ function checkout(a) {
   if(a <= product.length)
   {
   logo.src = product[a].src;
-  title.textContent = product[a].title; // Corrected the variable name from 'tittle' to 'title'
+  title.textContent = product[a].title; 
   price.textContent = product[a].price;
 popopen();
+addToWishlist(a);
 }
 
  
@@ -231,7 +233,7 @@ function wish(a) {
     if (img1.src.match('/images/wish-cart.png')) {
       img1.src = './images/wish-cart2.png'
       count();
-      newcard();
+      addToWishlist(a);
     }
     else if (img1.src.match('./images/wish-cart2.png')) {
       img1.src = './images/wish-cart.png';
@@ -274,6 +276,7 @@ const popup = document.getElementById('popup');
  function popclosed(){
   popup.style.visibility = 'hidden';
   popup.style.opacity = '0';
+  popup.style.transform='scale(0)'
   console.log("good")
  }
  function popopen(){
@@ -284,34 +287,51 @@ const popup = document.getElementById('popup');
  }
 //  this code for quantity 
 const plus = document.getElementById('qty_inc');
+const decre = document.getElementById('qty_dnc');
 const qty = document.getElementById('qty');
+let quantity = parseInt(qty.textContent);
+
 
 plus.addEventListener("click", () => {
-    let quantity = parseInt(qty.textContent);
-    quantity++;
-
-    if (quantity > 3) {
-      quantity=3;
-        alert("minimum 3 unit allowed");
-        
-    }
-
-    qty.textContent = quantity;
+  quantity++;
+  if (quantity > 3) {
+    quantity = 3;
+    alert("Maximum allowed quantity is " + 3);
+  }
+  updateQuantity();
 });
 
-const decre=document.getElementById('qty_dnc');
-decre.addEventListener("click",()=>{
-  let quantity=parseInt(qty.textContent);
+decre.addEventListener("click", () => {
   quantity--;
-  if(quantity<1){
-    quantity=1;
-    
+  if (quantity < 1) {
+    quantity = 1;
   }
-  qty.textContent=quantity;
-})
+  updateQuantity();
+});
 
+function updateQuantity() {
+  qty.textContent = quantity;
+  localStorage.setItem("qu1", quantity);
+  console.log()
+}
 
+var wishlistData = [];
 
+function addToWishlist(a) {
+  "use strict";
+  const productPrice = product[a].price;
+  let storedQuantity = localStorage.getItem("qu1");
+  var currentItem = {
+    "id": wishlistData.length + 1,
+    "src": product[a].src,
+    "name": product[a].title,
+    "price": productPrice,
+    "qty": storedQuantity,
+    "total": storedQuantity * productPrice
+  };
 
-
-
+  
+  wishlistData.push(currentItem);
+  localStorage.setItem('wishlist', JSON.stringify(wishlistData));
+}
+// this code for login
